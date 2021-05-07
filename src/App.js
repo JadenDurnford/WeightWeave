@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DatePicker from "react-date-picker";
 import moment from "moment";
 import {
@@ -122,7 +122,7 @@ export default function App() {
     let newRecord = weightRecord;
     var i;
     for (i = 0; i < newRecord.length; i++) {
-      if (newRecord[i].date == moment(date).format("YYYYMMDD")) {
+      if (newRecord[i].date === moment(date).format("YYYYMMDD")) {
         return;
       }
     }
